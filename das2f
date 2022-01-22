@@ -1,0 +1,3 @@
+#!/bin/bash
+das2fdir=${HOME}/app/das2f
+${das2fdir}/run-fb-pipeline.bash $1

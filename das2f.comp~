@@ -1,0 +1,13 @@
+# das2f {
+#   in: [name diagram d2f]
+#   out: [fb]
+# }
+
+name=$1
+diagram=#2
+d2f=$3
+fb=$4
+
+das2fdir=${HOME}/app/das2f
+${das2fdir}/run-fb-pipeline.bash $1
+

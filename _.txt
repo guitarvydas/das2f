@@ -1,0 +1,298 @@
+$ ./dr.bash
+** copying commands **
+[ execTranspiler
+
+{
+
+Main : function (_Title,_Parameters,_Imports,_DesignRuleQuery,_OnFailure) { 
+_ruleEnter ("Main");
+
+var Title = _Title._glue ();
+var Parameters = _Parameters._glue ();
+var Imports = _Imports._glue ();
+var DesignRuleQuery = _DesignRuleQuery._glue ();
+var OnFailure = _OnFailure._glue ();
+var _result = `${Title}${Parameters}${Imports}${DesignRuleQuery}${OnFailure}`; 
+_ruleExit ("Main");
+return _result; 
+},
+            
+Title : function (_sharp,_kdesign,_krule,_anythingToEOL) { 
+_ruleEnter ("Title");
+
+var sharp = _sharp._glue ().join ('');
+var kdesign = _kdesign._glue ();
+var krule = _krule._glue ();
+var anythingToEOL = _anythingToEOL._glue ();
+var _result = `${sharp} ${kdesign} ${rule} ${anythingToEOL}\n`; 
+_ruleExit ("Title");
+return _result; 
+},
+            
+Parameters : function (_sharp,_kparameters,_anythingToEOL,_identifier) { 
+_ruleEnter ("Parameters");
+
+var sharp = _sharp._glue ().join ('');
+var kparameters = _kparameters._glue ();
+var anythingToEOL = _anythingToEOL._glue ();
+var identifier = _identifier._glue ().join ('');
+var _result = `${sharp} ${kparameters} ${anythingToEOL} ${identifier}\n`; 
+_ruleExit ("Parameters");
+return _result; 
+},
+            
+Imports : function (_sharp,_kimports,_anythingToEOL,_identifier) { 
+_ruleEnter ("Imports");
+
+var sharp = _sharp._glue ().join ('');
+var kimports = _kimports._glue ();
+var anythingToEOL = _anythingToEOL._glue ();
+var identifier = _identifier._glue ().join ('');
+var _result = `${sharp} ${kimports} ${anythingToEOL} ${identifier}\n`; 
+_ruleExit ("Imports");
+return _result; 
+},
+            
+DesignRuleQuery : function (_sharp,_krule,_anythingToEOL,_Forall) { 
+_ruleEnter ("DesignRuleQuery");
+
+var sharp = _sharp._glue ().join ('');
+var krule = _krule._glue ();
+var anythingToEOL = _anythingToEOL._glue ();
+var Forall = _Forall._glue ();
+var _result = `${sharp ${krule} ${anythingToEOL} ${Forall}\n`; 
+_ruleExit ("DesignRuleQuery");
+return _result; 
+},
+            
+OnFailure : function (_sharp,_kon,_kfailure,_printLine) { 
+_ruleEnter ("OnFailure");
+
+var sharp = _sharp._glue ().join ('');
+var kon = _kon._glue ();
+var kfailure = _kfailure._glue ();
+var printLine = _printLine._glue ().join ('');
+var _result = `${sharp} ${kon} ${kfailure} ${printLine}\n`; 
+_ruleExit ("OnFailure");
+return _result; 
+},
+            
+Forall : function (_kforall,_ForAllClause,_QueryClause,_kend,_kforall) { 
+_ruleEnter ("Forall");
+
+var kforall = _kforall._glue ();
+var ForAllClause = _ForAllClause._glue ();
+var QueryClause = _QueryClause._glue ().join ('');
+var kend = _kend._glue ();
+var kforall = _kforall._glue ();
+var _result = `${kforall} ${ForAllClause} ${QueryClause} ${kend} ${kforall}`; 
+_ruleExit ("Forall");
+return _result; 
+},
+            
+QueryClause_cond : function (_kcond,_QueryClause,_kend,_kcond) { 
+_ruleEnter ("QueryClause_cond");
+
+var kcond = _kcond._glue ();
+var QueryClause = _QueryClause._glue ().join ('');
+var kend = _kend._glue ();
+var kcond = _kcond._glue ();
+var _result = `${kcond} ${QueryClause} ${kend} ${kcond}`; 
+_ruleExit ("QueryClause_cond");
+return _result; 
+},
+            
+QueryClause_other : function (_PrologClause) { 
+_ruleEnter ("QueryClause_other");
+
+var PrologClause = _PrologClause._glue ();
+var _result = `${PrologClause}`; 
+_ruleExit ("QueryClause_other");
+return _result; 
+},
+            
+printLine : function (_notNL,_nl) { 
+_ruleEnter ("printLine");
+
+var notNL = _notNL._glue ().join ('');
+var nl = _nl._glue ();
+var _result = `${notNL} ${nl}\n`; 
+_ruleExit ("printLine");
+return _result; 
+},
+            
+ForAllClause : function (_PrologClause) { 
+_ruleEnter ("ForAllClause");
+
+var PrologClause = _PrologClause._glue ();
+var _result = `${PrologClause}`; 
+_ruleExit ("ForAllClause");
+return _result; 
+},
+            
+PrologClause_clauseWithArgs : function (_identifier,_klp,_prologArgs,_krp) { 
+_ruleEnter ("PrologClause_clauseWithArgs");
+
+var identifier = _identifier._glue ();
+var klp = _klp._glue ();
+var prologArgs = _prologArgs._glue ().join ('');
+var krp = _krp._glue ();
+var _result = `${identifier} ${klp} ${prologArgs} ${krp}`; 
+_ruleExit ("PrologClause_clauseWithArgs");
+return _result; 
+},
+            
+PrologClause_assignment : function (_identifier1,_keq,_identifier2) { 
+_ruleEnter ("PrologClause_assignment");
+
+var identifier1 = _identifier1._glue ();
+var keq = _keq._glue ();
+var identifier2 = _identifier2._glue ();
+var _result = `${identifier1} ${keq} ${identifier2}`; 
+_ruleExit ("PrologClause_assignment");
+return _result; 
+},
+            
+PrologClause_clauseWithoutArgs : function (_identifier) { 
+_ruleEnter ("PrologClause_clauseWithoutArgs");
+
+var identifier = _identifier._glue ();
+var _result = `${identifier}`; 
+_ruleExit ("PrologClause_clauseWithoutArgs");
+return _result; 
+},
+            
+prologArgs_nested : function (_klp,_prologArgs,_krp) { 
+_ruleEnter ("prologArgs_nested");
+
+var klp = _klp._glue ();
+var prologArgs = _prologArgs._glue ().join ('');
+var krp = _krp._glue ();
+var _result = `${klp} ${prologArgs} ${krp}`; 
+_ruleExit ("prologArgs_nested");
+return _result; 
+},
+            
+prologArgs_other : function (_any) { 
+_ruleEnter ("prologArgs_other");
+
+var any = _any._glue ();
+var _result = `${any}`; 
+_ruleExit ("prologArgs_other");
+return _result; 
+},
+            
+keyword : function (_word) { 
+_ruleEnter ("keyword");
+
+var word = _word._glue ();
+var _result = `${word}`; 
+_ruleExit ("keyword");
+return _result; 
+},
+            
+sharp : function (_c) { 
+_ruleEnter ("sharp");
+
+var c = _c._glue ();
+var _result = `${c}`; 
+_ruleExit ("sharp");
+return _result; 
+},
+            
+anythingToEOL : function (_notNL,_nl) { 
+_ruleEnter ("anythingToEOL");
+
+var notNL = _notNL._glue ().join ('');
+var nl = _nl._glue ();
+var _result = `${notNL}${nl}`; 
+_ruleExit ("anythingToEOL");
+return _result; 
+},
+            
+nl : function (_c) { 
+_ruleEnter ("nl");
+
+var c = _c._glue ();
+var _result = `${c}`; 
+_ruleExit ("nl");
+return _result; 
+},
+            
+notNL : function (_any) { 
+_ruleEnter ("notNL");
+
+var any = _any._glue ();
+var _result = `${any}`; 
+_ruleExit ("notNL");
+return _result; 
+},
+            
+identifier : function (_firstChar,_restChar) { 
+_ruleEnter ("identifier");
+
+var firstChar = _firstChar._glue ();
+var restChar = _restChar._glue ().join ('');
+var _result = `${firstChar}${restChar}`; 
+_ruleExit ("identifier");
+return _result; 
+},
+            
+firstChar : function (_c) { 
+_ruleEnter ("firstChar");
+
+var c = _c._glue ();
+var _result = `${c}`; 
+_ruleExit ("firstChar");
+return _result; 
+},
+            
+restChar : function (_c) { 
+_ruleEnter ("restChar");
+
+var c = _c._glue ();
+var _result = `${c}`; 
+_ruleExit ("restChar");
+return _result; 
+},
+            
+comment : function (_kpercents,_anythingToEOL) { 
+_ruleEnter ("comment");
+
+var kpercents = _kpercents._glue ();
+var anythingToEOL = _anythingToEOL._glue ();
+var _result = `${kpercents}${anythingToEOL}`; 
+_ruleExit ("comment");
+return _result; 
+},
+            
+space : function (_c) { 
+_ruleEnter ("space");
+
+var c = _c._glue ();
+var _result = `${c}`; 
+_ruleExit ("space");
+return _result; 
+},
+            
+_terminal: function () { return this.sourceString; },
+_iter: function (...children) { return children.map(c => c._glue ()); }
+}
+execTranspiler ]
+source:
+#.design.rule.edge.containment.%%.use.experimental.editor.https://ohmlang.github.io/editor/?ohm-js=next.##.parameters...Edge.##.imports...shapes...onSameDiagram...inside...names...ports...contains.##.rule...%%.see."doc/Design.Rules.md"...forall.das_fact(kind,Edge,edge).....diagram_fact(source,Edge,SourceLongID).....diagram_fact(synonym,SourceID,SourceLongID).....diagram_fact(target,Edge,TargetLongID).....diagram_fact(synonym,TargetID,TargetLongID)..diagram_fact(direct-contains,SourceParent,SourceID).....diagram_fact(direct-contains,TargetParent,TargetID).....diagram_fact(direct-contains,SourceContainer,SourceParent).....diagram_fact(direct-contains,TargetContainer,TargetParent).....cond........SourceContainer.=.TargetContainer.......das_fact(direct_contains,SourceContainer,TargetContainer).......das_fact(direct_contains,TargetContainer,SourceContainer).....end.cond...end.forall.##.on.failure.Edge.Containment.edge=.....
+/Users/tarvydas/app/bin/prep:260
+	throw err;
+	^
+
+SyntaxError: Missing } in template expression
+    at execTranspiler (/Users/tarvydas/app/bin/prep:246:62)
+    at internal_stranspile (/Users/tarvydas/app/bin/prep:267:24)
+    at expand (/Users/tarvydas/app/bin/prep:272:18)
+    at expandAll (/Users/tarvydas/app/bin/prep:339:25)
+    at pre (/Users/tarvydas/app/bin/prep:366:20)
+    at main (/Users/tarvydas/app/bin/prep:390:18)
+    at Object.<anonymous> (/Users/tarvydas/app/bin/prep:397:1)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+   
