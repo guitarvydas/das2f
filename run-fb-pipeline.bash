@@ -1,13 +1,7 @@
-# usage: run-fb-pipeline.bash tool-dir taget-name
+# usage: run-fb-pipeline.bash tool-dir
+
 root=$1
-target=$2
 das2fdir=$root/das2f
-
-echo '** factbase pipeline **' 1>&2
-
-# Layer 0. Convert helloword.drawio into factbase format using d2f.
-echo '** layer 0 (' "$target" ' --> fb.pl) **' 1>&2
-$root/d2f/d2f.bash $1 $2 >fb.pl
 
 # We will store the factbase in a file called fb.pl
 # We will augment fb.pl in each step along the way.
