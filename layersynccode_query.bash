@@ -1,5 +1,4 @@
 
-
 temp=temp${RANDOM}
 # synchronous code
 
@@ -7,8 +6,8 @@ temp=temp${RANDOM}
 cat >${temp}.pl <<'~~~'
 :- use_module(library(http/json)).
 ?- consult(fb).
-?- consult("/Users/tarvydas/app/das2f/shapes").
-?- consult("/Users/tarvydas/app/das2f/values").
+?- consult("/Users/tarvydas/projects/das2f/shapes").
+?- consult("/Users/tarvydas/projects/das2f/values").
 query_helper(Codebox,Code):-
 das_fact(kind,Codebox,rectangle),
 das_fact(color,Codebox,"red"),

@@ -1,5 +1,4 @@
 
-
 temp=temp${RANDOM}
 # layer names
 
@@ -7,12 +6,12 @@ temp=temp${RANDOM}
 cat >${temp}.pl <<'~~~'
 :- use_module(library(http/json)).
 ?- consult(fb).
-?- consult("/Users/tarvydas/app/das2f/shapes").
-?- consult("/Users/tarvydas/app/das2f/onSameDiagram").
-?- consult("/Users/tarvydas/app/das2f/inside").
-?- consult("/Users/tarvydas/app/das2f/names").
-?- consult("/Users/tarvydas/app/das2f/ports").
-?- consult("/Users/tarvydas/app/das2f/contains").
+?- consult("/Users/tarvydas/projects/das2f/shapes").
+?- consult("/Users/tarvydas/projects/das2f/onSameDiagram").
+?- consult("/Users/tarvydas/projects/das2f/inside").
+?- consult("/Users/tarvydas/projects/das2f/names").
+?- consult("/Users/tarvydas/projects/das2f/ports").
+?- consult("/Users/tarvydas/projects/das2f/contains").
 query_helper(ID,Name):-
 diagram_fact(vertex,ID,_),
 diagram_fact(value,ID,Name),

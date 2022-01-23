@@ -1,0 +1,11 @@
+# make a watch (debug) view from $1.md and run it (once)
+# usage: querydisplay name
+trap 'fatal' ERR
+fatal () {
+    echo '$$ fatal querydisplay $$'
+    exit 1
+}
+
+qddir=${HOME}/app/setquerydisplay
+echo ${target}
+pfr $1.md ${qddir}/sqd.ohm ${qddir}/sqd.glue --support=${qddir}/support.js $2

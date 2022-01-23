@@ -1,3 +1,3 @@
-../make.bash
-./make.bash
+./make.bash ..
+
 

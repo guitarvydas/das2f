@@ -1,0 +1,16 @@
+# generate queries
+#
+# usage: ./make.bash <tools-root>
+
+root=$1
+
+here=`pwd`
+temp=temp_${RANDOM}
+
+qd3=$here/qd3/querydisplay3.bash
+prep=$root/prep/prep
+
+$prep '#+ query ' '#+ ' implicitforall.ohm implicitforall.glue --support=$here/implicitforall.support.js <layerallcontains.md >preprocessed_layerallcontains.md
+$qd3 preprocessed_layerallcontains --prefix="$here/" >layerallcontains_query.bash
+chmod a+x layerallcontains_query.bash
+echo '-- layerallcontains_query.bash generated --' 1>&2

@@ -1,5 +1,4 @@
 
-
 temp=temp${RANDOM}
 # connection
 
@@ -7,9 +6,9 @@ temp=temp${RANDOM}
 cat >${temp}.pl <<'~~~'
 :- use_module(library(http/json)).
 ?- consult(fb).
-?- consult("/Users/tarvydas/app/das2f/shapes").
-?- consult("/Users/tarvydas/app/das2f/names").
-?- consult("/Users/tarvydas/app/das2f/connection").
+?- consult("/Users/tarvydas/projects/das2f/shapes").
+?- consult("/Users/tarvydas/projects/das2f/names").
+?- consult("/Users/tarvydas/projects/das2f/connection").
 query_helper(Parent,Edge,Sender,Receiver):-
 das_fact(kind,Edge,edge),
 sourceof(Edge,Sender),

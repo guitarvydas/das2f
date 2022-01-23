@@ -1,5 +1,4 @@
 
-
 temp=temp${RANDOM}
 # contains port
 
@@ -7,11 +6,11 @@ temp=temp${RANDOM}
 cat >${temp}.pl <<'~~~'
 :- use_module(library(http/json)).
 ?- consult(fb).
-?- consult("/Users/tarvydas/app/das2f/shapes").
-?- consult("/Users/tarvydas/app/das2f/onSameDiagram").
-?- consult("/Users/tarvydas/app/das2f/inside").
-?- consult("/Users/tarvydas/app/das2f/names").
-?- consult("/Users/tarvydas/app/das2f/ports").
+?- consult("/Users/tarvydas/projects/das2f/shapes").
+?- consult("/Users/tarvydas/projects/das2f/onSameDiagram").
+?- consult("/Users/tarvydas/projects/das2f/inside").
+?- consult("/Users/tarvydas/projects/das2f/names").
+?- consult("/Users/tarvydas/projects/das2f/ports").
 query_helper(Parent,Child):-
 das_fact(contains,Parent,X),
 das_fact(contains,X,Child),
