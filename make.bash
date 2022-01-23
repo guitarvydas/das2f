@@ -56,14 +56,14 @@ $qd3 $root $here/qd3   preprocessed_connection --prefix="$here/"  >layerconnecti
 chmod a+x layerconnection_query.bash
 echo '-- layerconnection_query.bash generated --' 1>&2
 
-$prep '#+ forall ' '#+ ' forall.ohm forall.glue --support=$here/forall.support.js <layerkind.md >preprocessed_layerkind.md
-$prep '#+ query ' '#+ ' implicitforall.ohm implicitforall.glue  --support=$here/implicitforall.support.js <preprocessed_layerkind.md >preprocessed2_layerkind.md
+$prep '#+ forall ' '#+ ' forall.ohm forall.glue --support=$here/forall.support.js --exclusive <layerkind.md >preprocessed_layerkind.md
+$prep '#+ query ' '#+ ' implicitforall.ohm implicitforall.glue  --support=$here/implicitforall.support.js --exclusive <preprocessed_layerkind.md >preprocessed2_layerkind.md
 $qd3 $root $here/qd3   preprocessed2_layerkind --prefix="$here/"  >layerkind_query.bash
 chmod a+x layerkind_query.bash
 echo '-- layerkind_query.bash generated --' 1>&2
 
-$prep  "#+ forall " "#+ " forall.ohm forall.glue  --support=$here/forall.support.js <layercolor.md >preprocessed_layercolor.md
-$prep '#+ query ' '#+ ' implicitforall.ohm implicitforall.glue  --support=$here/implicitforall.support.js <preprocessed_layercolor.md >preprocessed2_layercolor.md
+$prep  "#+ forall " "#+ " forall.ohm forall.glue  --support=$here/forall.support.js --exclusive <layercolor.md >preprocessed_layercolor.md
+$prep '#+ query ' '#+ ' implicitforall.ohm implicitforall.glue  --support=$here/implicitforall.support.js --exclusive <preprocessed_layercolor.md >preprocessed2_layercolor.md
 $qd3 $root $here/qd3    preprocessed2_layercolor --prefix="$here/" >layercolor_query.bash
 chmod a+x layercolor_query.bash
 echo '-- layercolor_query.bash generated --' 1>&2
@@ -78,8 +78,8 @@ $qd3 $root $here/qd3   preprocessed_layerboundingbox --prefix="$here/"  >layerbo
 chmod a+x layerboundingbox_query.bash
 echo '-- layerboundingbox_query.bash generated --' 1>&2
 
-$prep  "#+ forall " "#+ " forall.ohm forall.glue  --support=$here/forall.support.js <layerdirection.md >preprocessed_layerdirection.md
-$prep '#+ query ' '#+ ' implicitforall.ohm implicitforall.glue  --support=$here/implicitforall.support.js  <preprocessed_layerdirection.md >preprocessed2_layerdirection.md
+$prep  "#+ forall " "#+ " forall.ohm forall.glue  --support=$here/forall.support.js --exclusive <layerdirection.md >preprocessed_layerdirection.md
+$prep '#+ query ' '#+ ' implicitforall.ohm implicitforall.glue  --support=$here/implicitforall.support.js  --exclusive <preprocessed_layerdirection.md >preprocessed2_layerdirection.md
 $qd3 $root $here/qd3    preprocessed2_layerdirection --prefix="$here/" >layerdirection_query.bash
 chmod a+x layerdirection_query.bash
 echo '-- layerdirection_query.bash generated --' 1>&2
