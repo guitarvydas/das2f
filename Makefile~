@@ -1,0 +1,4 @@
+clean:
+	rm -f layer*
+	rm -f preprocessed*
+	rm -f out.json
