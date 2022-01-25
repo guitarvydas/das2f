@@ -1,7 +1,5 @@
 # usage: run-fb-pipeline.bash tool-dir
 
-set -x
-
 root=$1
 das2fdir=$root/das2f
 
