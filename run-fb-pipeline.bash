@@ -1,5 +1,7 @@
 # usage: run-fb-pipeline.bash tool-dir
 
+set -x
+
 root=$1
 das2fdir=$root/das2f
 
@@ -10,6 +12,7 @@ das2fdir=$root/das2f
 
 # Layer 1. Infer low-hanging fruit information.
 echo '** layer 1 **' 1>&2
+
 ${das2fdir}/layerkind ${das2fdir} 1>&2 # <<>>fb.pl
 ${das2fdir}/layername ${das2fdir} 1>&2 # <<>>fb.pl
 ${das2fdir}/layercolor ${das2fdir} 1>&2 # <<>>fb.pl
