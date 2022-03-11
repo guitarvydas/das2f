@@ -1,4 +1,6 @@
-all:
+all: firsttime
+
+firsttime:
 	./build.bash ..
 
 clean:
