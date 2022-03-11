@@ -5,12 +5,12 @@ temp=temp${RANDOM}
 
 cat >${temp}.pl <<'~~~'
 :- use_module(library(http/json)).
-?- consult(fb).
-?- consult("/Users/tarvydas/projects/das2f/shapes").
-?- consult("/Users/tarvydas/projects/das2f/onSameDiagram").
-?- consult("/Users/tarvydas/projects/das2f/inside").
-?- consult("/Users/tarvydas/projects/das2f/names").
-?- consult("/Users/tarvydas/projects/das2f/ports").
+?- consult("fb.pl").
+?- consult("/Users/tarvydas/projects/das2f/shapes.pl").
+?- consult("/Users/tarvydas/projects/das2f/onSameDiagram.pl").
+?- consult("/Users/tarvydas/projects/das2f/inside.pl").
+?- consult("/Users/tarvydas/projects/das2f/names.pl").
+?- consult("/Users/tarvydas/projects/das2f/ports.pl").
 query_helper(Parent,Child):-
 das_fact(contains,Parent,X),
 das_fact(contains,X,Child),

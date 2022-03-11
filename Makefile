@@ -1,8 +1,4 @@
-all: firsttime
-
-firsttime: layerkind_query.bash
-
-layerkind_query.bash:
+all:
 	./build.bash ..
 
 clean:

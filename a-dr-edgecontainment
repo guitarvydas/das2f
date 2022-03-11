@@ -2,12 +2,12 @@
 :-initialization(designrule,main).
 :- use_module(library(http/json)).
 ?- consult(fb).
-?- consult("/Users/tarvydas/projects/das2f/shapes.pl").
-?- consult("/Users/tarvydas/projects/das2f/onSameDiagram.pl").
-?- consult("/Users/tarvydas/projects/das2f/inside.pl").
-?- consult("/Users/tarvydas/projects/das2f/names.pl").
-?- consult("/Users/tarvydas/projects/das2f/ports.pl").
-?- consult("/Users/tarvydas/projects/das2f/contains.pl").
+?- consult("./shapes.pl").
+?- consult("./onSameDiagram.pl").
+?- consult("./inside.pl").
+?- consult("./names.pl").
+?- consult("./ports.pl").
+?- consult("./contains.pl").
 
 
  

@@ -5,13 +5,13 @@ temp=temp${RANDOM}
 
 cat >${temp}.pl <<'~~~'
 :- use_module(library(http/json)).
-?- consult(fb).
-?- consult("/Users/tarvydas/projects/das2f/shapes").
-?- consult("/Users/tarvydas/projects/das2f/onSameDiagram").
-?- consult("/Users/tarvydas/projects/das2f/inside").
-?- consult("/Users/tarvydas/projects/das2f/names").
-?- consult("/Users/tarvydas/projects/das2f/ports").
-?- consult("/Users/tarvydas/projects/das2f/contains").
+?- consult("fb.pl").
+?- consult("/Users/tarvydas/projects/das2f/shapes.pl").
+?- consult("/Users/tarvydas/projects/das2f/onSameDiagram.pl").
+?- consult("/Users/tarvydas/projects/das2f/inside.pl").
+?- consult("/Users/tarvydas/projects/das2f/names.pl").
+?- consult("/Users/tarvydas/projects/das2f/ports.pl").
+?- consult("/Users/tarvydas/projects/das2f/contains.pl").
 query_helper(ID,Name):-
 diagram_fact(vertex,ID,_),
 diagram_fact(value,ID,Name),
