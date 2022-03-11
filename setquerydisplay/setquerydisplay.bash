@@ -1,10 +1,10 @@
 # usage: setquerydisplay root-directory here-directory target-name prefix-arg
-trap 'fatal' ERR
 fatal () {
     echo '$$ fatal setquerydisplay $$'
     exit 1
 }
 
+trap 'fatal' ERR
 
 root=$1
 sqddir=$2

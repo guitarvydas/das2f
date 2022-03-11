@@ -1,9 +1,10 @@
 # usage: querydisplay3 root-directory here-directory target-name prefix-arg
-trap 'fatal' ERR
 fatal () {
     echo '$$ fatal querydisplay $$'
     exit 1
 }
+
+trap 'fatal' ERR
 
 root=$1
 qddir=$2
