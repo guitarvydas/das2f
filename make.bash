@@ -87,7 +87,7 @@ echo '-- layerdirection_query.bash generated --' 1>&2
 temp=temp_${RANDOM}
 
 plpath=./
-dr=~/projects/dr
+dr=${root}/dr
 mdfile=${dr}/dr-edgecontainment.md
 fname=`basename -s '.md' $mdfile`
 $prep "cond\n" "endcond\n" ${dr}/cond.ohm ${dr}/cond.glue --inclusive --stop=1 --support=${dr}/drsupport.js <$mdfile >$temp
