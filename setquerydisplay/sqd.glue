@@ -4,7 +4,7 @@ temp=temp\${RANDOM}
 ${Name}
 cat >\${temp}.pl <<'~~~'
 :- use_module(library(http/json)).
-?- consult(fb).
+?- consult("fb.pl").
 ${Imports.trim ()}
 query:-
 ${Query.trim ()}
@@ -36,7 +36,7 @@ Query [ksharp1 ksharp2 kquery @lines] = [[${lines}]]
 Display [ksharp1 ksharp2 kdisplay line] = [[${line}]]
  
 parameter [line] = [[${support.pushParameter (line)}]]
-import [line] = [[?- consult(\"${support.prefix (argv)}${line.trim()}\").\n]]
+import [line] = [[?- consult(\"${support.prefix (argv)}${line.trim()}.pl\").\n]]
 query [line] = [[${line.trim()},\n]]
 display [line] = [[${line}]]
 
