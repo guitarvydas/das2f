@@ -1,3 +1,4 @@
+#!/bin/bash
 # usage: querydisplay3 root-directory here-directory target-name prefix-arg
 fatal () {
     echo '$$ fatal querydisplay $$'

@@ -1,3 +1,4 @@
+#!/bin/bash
 # usage: setquerydisplay root-directory here-directory target-name prefix-arg
 fatal () {
     echo '$$ fatal setquerydisplay $$'
