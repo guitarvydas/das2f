@@ -1,11 +1,11 @@
 :- use_module(library(http/json)).
 
 common:-
-    consult(fb),
-    consult(shapes),
-    consult(onSameDiagram),
-    consult(inside),
-    consult(names),
-    consult(ports).
+    consult("fb.pl"),
+    consult("shapes.pl"),
+    consult("onSameDiagram.pl"),
+    consult("inside.pl"),
+    consult("names.pl"),
+    consult("ports.pl").
 
 
